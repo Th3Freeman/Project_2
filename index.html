@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./ParkerMDB/css/bootstrap.css">
+    <link rel="stylesheet" href="./ParkerMDB/css/mdb.css">
+    <link rel="stylesheet" href="./ParkerMDB/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color lighten-4">
+        <a class="navbar-brand" href="#">Brother.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Weekly
+                <span class="sr-only">(current)</span>
+              </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Monthly.html">Monthly</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Yearly.html">Yearly</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">1
+                <i class="fas fa-envelope"></i>
+              </a>
+                </li>
+                <li class="nav-item avatar dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./Team/images/02-silicon-valley-04-07.w710.h473.jpg" class="rounded-circle z-depth-0" alt="avatar image">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+    <br>
+    <div class="container">
+        <!-- User Avatar and Montly Allowance -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col">
+                <!-- Card -->
+                <div class="card testimonial-card">
+
+                    <!-- Background color -->
+                    <div class="card-up aqua-gradient lighten-1"></div>
+
+                    <!-- Avatar -->
+                    <div class="avatar mx-auto white">
+                        <img src="./Team/images/02-silicon-valley-04-07.w710.h473.jpg" class="rounded-circle" alt="avatar">
+                    </div>
+
+                    <!-- Content -->
+                    <div class="card-body">
+                        <!-- Name -->
+                        <h4 class="card-title">John Smith</h4>
+                        <hr>
+                        <!-- Quotation -->
+                        <p><i class=""></i> Starting Amount: $5000</p>
+                        <p><i class=""></i> Current Amount: $2500</p>
+
+                    </div>
+
+                </div>
+                <!-- Card -->
+            </div>
+            <!-- User Percentage Increase -->
+            <div class="col">
+                <!-- Card -->
+                <div class="card chart-card">
+
+                    <!-- Card content -->
+                    <div class="card-body pb-0">
+
+                        <!-- Title -->
+                        <h4 class="card-title font-weight-bold">Alie Corporation</h4>
+                        <!-- Text -->
+                        <p class="card-text mb-4">NYSE: AZHC • Oct 16, 1:45PM</p>
+                        <div class="d-flex justify-content-between">
+                            <p class="display-4 align-self-end">887.32</p>
+                            <p class="align-self-end pb-2">887.02 (.03%)</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Classic tabs -->
+                    <div class="classic-tabs">
+
+                        <!-- Nav tabs -->
+                        <ul class="nav tabs-white nav-fill" role="tablist">
+                            <li class="nav-item ml-0">
+                                <a class="nav-link waves-light active" data-toggle="tab" href="#panel1001" role="tab">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-light" data-toggle="tab" href="#panel1002" role="tab">Follow</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link waves-light" data-toggle="tab" href="#panel1003" role="tab">Contact</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content rounded-bottom">
+                            <!--Panel 1-->
+                            <div class="tab-pane fade in show active" id="panel1001" role="tabpanel">
+                                <canvas id="lineChart" height="250px"></canvas>
+                            </div>
+                            <!--/.Panel 1-->
+                            <!--Panel 2-->
+                            <div class="tab-pane fade" id="panel1002" role="tabpanel">
+                                <p align="justify" class="font-small text-muted mx-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate
+                                    odit minima.</p>
+                                <p align="justify" class="font-small text-muted mx-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate
+                                    odit minima.</p>
+                            </div>
+                            <!--/.Panel 2-->
+                            <!--Panel 3-->
+                            <div class="tab-pane fade" id="panel1003" role="tabpanel">
+                                <img class="img-fluid z-depth-1 rounded mb-3" alt="sample image" src="https://mdbootstrap.com/img/Photos/Others/intro1.jpg">
+                                <p align="justify" class="font-small text-muted mx-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil odit magnam minima, soluta doloribus reiciendis molestiae placeat unde eos molestias. Quisquam aperiam, pariatur. Tempora, placeat ratione porro voluptate
+                                    odit minima at ipsum sit amet.</p>
+                            </div>
+                            <!--/.Panel 3-->
+                        </div>
+
+                    </div>
+                    <!-- Classic tabs -->
+
+                </div>
+                <!-- Card -->
+            </div>
+            <!-- User Percentage Increase -->
+
+            <div class="col-2"></div>
+        </div>
+        <!-- ./User Avatar and Montly Allowance -->
+
+        <br>
+        <!-- Progress Bar For User Total Usage -->
+        <div class="row">
+            <div class="col-12">
+                <div class="progress md-progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+        <!-- ./Progress Bar For User Total Usage -->
+
+    </div>
+    <br>
+    <hr>
+    <!-- Spending Cats -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Spending By Category:</h1>
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <!-- Card deck -->
+                <div class="card-deck">
+
+                    <!-- Card -->
+                    <div class="card mb-4">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Card title</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                    <!-- Card -->
+                    <div class="card mb-4">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Card title</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                    <!-- Card -->
+                    <div class="card mb-4">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Card title</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+                <!-- Card deck -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <!-- Card deck -->
+                <div class="card-deck">
+
+                    <!-- Card -->
+                    <div class="card mb-4">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Card title</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                    <!-- Card -->
+                    <div class="card mb-4">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Card title</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                    <!-- Card -->
+                    <div class="card mb-4">
+
+                        <!--Card image-->
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+
+                        <!--Card content-->
+                        <div class="card-body">
+
+                            <!--Title-->
+                            <h4 class="card-title">Card title</h4>
+                            <!--Text-->
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+
+                        </div>
+
+                    </div>
+                    <!-- Card -->
+
+                </div>
+                <!-- Card deck -->
+            </div>
+        </div>
+    </div>
+    <!-- ./Spending Cats -->
+
+</body>
+<script src="./ParkerMDB/js/bootstrap.js"></script>
+<script src="./ParkerMDB/js/jquery-3.3.1.min.js"></script>
+<script src="./ParkerMDB/js/mdb.js"></script>
+<script src="./ParkerMDB/js/popper.min.js"></script>
+<script src="./Team/JS/Indexpage.js"></script>
+
+
+
+</html>
