@@ -8,6 +8,8 @@ var passport = require("./config/passport");
 var passport = require("./models")
 
 //Setting up port
+const app = express()
+    //Setting up port
 var PORT = process.env.PORT || 8080;
 
 // Set Handlebars as the default templating engine
@@ -19,9 +21,11 @@ app.use(session({ secret: "MrSweetMeats", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(express.static('public'))
+
 
 
 //Listening function
 app.listen(PORT, function() {
     console.log("App listening on PORT: " + PORT);
-  });
+});
