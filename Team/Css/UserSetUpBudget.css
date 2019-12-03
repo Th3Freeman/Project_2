@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+p {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
+
+.AddBtn {
+    background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.Travel {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.Shopping {
+    background: linear-gradient(120deg, rgb(233, 233, 19) 0%, #e8bb06 100%);
+}
+
+.Health {
+    background: linear-gradient(120deg, rgb(230, 107, 12) 0%, #e40808 100%);
+}
+
+.file-field.medium .file-path-wrapper {
+    height: 3rem;
+}
+
+.file-field.medium .file-path-wrapper .file-path {
+    height: 2.8rem;
+}
+
+.file-field.big-2 .file-path-wrapper {
+    height: 3.7rem;
+}
+
+.file-field.big-2 .file-path-wrapper .file-path {
+    height: 3.5rem;
+}
