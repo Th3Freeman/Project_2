@@ -9,7 +9,7 @@ const path = require("path");
 
 //Setting up port
 const app = express()
-    //Setting up port
+//Setting up port
 var PORT = process.env.PORT || 8080;
 
 //Set Handlebars as the default templating engine
@@ -24,10 +24,18 @@ app.use(express.json());
 //app.use(passport.initialize());
 //app.use(passport.session());
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
-app.get("/", function(req, res) {
-    res.render("index");
+app.get("/LandingPage", function(req, res) {
+    res.render("LandingPage", {title: "LandingPage", css: "/stylesheets/Css/LandingPage.css"});
+  });
+
+app.get("/SnapShot", function(req, res) {
+    res.render("index", {title: "Snapshot", css: "/stylesheets/Css/index.css"});
+  });
+
+app.get("/UserSetUpBudget", function(req, res) {
+    res.render("UserSetUpBudget", {title: "Budget", css: "/stylesheets/Css/index.css"});
   });
 
 //Listening function
