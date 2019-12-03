@@ -5,11 +5,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Budget Manager</title>
+    <!-- MDB -->
+    <link rel="stylesheet" href="./ParkerMDB/css/bootstrap.css">
+    <link rel="stylesheet" href="./ParkerMDB/css/mdb.css">
+    <link rel="stylesheet" href="./ParkerMDB/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <!-- Team StyleSheets -->
+    <link rel="stylesheet" href="./Team/Css/UserSetUpBudget.css">
+
+
 </head>
 
 <body>
+    <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark peach-gradient lighten-4">
+        <a class="navbar-brand" href="#">Brother.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Weekly
+                        <span class="sr-only">(current)</span>
+                      </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Monthly.html">Monthly</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Yearly.html">Yearly</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">1
+                        <i class="fas fa-envelope"></i>
+                      </a>
+                </li>
+                <li class="nav-item avatar dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./Team/images/02-silicon-valley-04-07.w710.h473.jpg" class="rounded-circle z-depth-0" alt="avatar image">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+    <br>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Steps:</h1>
+            </div>
+        </div>
+        <hr>
+        <!-- Steps -->
+        <div class="row">
+            <div class="col">
+
+                <p>Step 1: Enter In Your Monthly Income</p>
+
+                <p>Step 2: Click The Save Button</p>
+
+                <p>Step 3: Click A Category</p>
+
+                <p>Step 4: Enter In The Name </p>
+
+                <p>Step 5: Enter In The Price Per Month</p>
+
+                <p>Step 6: Click Add</p>
+            </div>
+        </div>
+        <!-- ./Steps -->
+
+        <br>
+        <!-- Income Form -->
+        <div class="row">
+            <div class="col-12">
+                <form class="md-form">
+                    <div class="file-field big-2">
+                        <div class="btn btn-rounded peach-gradient btn-lg float-left">
+                            <span>Save</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Your Monthly Income">
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+        <!-- ./Income Form -->
+
+        <br>
+        <!-- Buttons for Cats -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col"> <button class="btn btn-rounded btn-lg Travel" data-toggle="modal" data-target="#CatModal">Travel</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded FoodDrink peach-gradient" data-toggle="modal" data-target="#CatModal">Food & Drink</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Transportation blue-gradient" data-toggle="modal" data-target="#CatModal">Transportation</button></div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Services purple-gradient" data-toggle="modal" data-target="#CatModal">Services</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Shopping" data-toggle="modal" data-target="#CatModal">Shopping</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Health" data-toggle="modal" data-target="#CatModal">Health</button></div>
+        </div>
+        <!-- ./Buttons for Cats -->
+
+
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="CatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">cat.name</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-rounded AddBtn">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./Modal -->
+
+
+
+
+
+
+    <!-- MDB -->
+    <script src="./ParkerMDB/js/popper.min.js"></script>
+    <script src="./ParkerMDB/js/jquery-3.3.1.min.js"></script>
+    <script src="./ParkerMDB/js/bootstrap.js"></script>
+    <script src="./ParkerMDB/js/mdb.js"></script>
+    <!-- Team Scripts -->
 </body>
 
 </html>
