@@ -1,14 +1,19 @@
 //Dependencies
 const express = require("express");
 const exphbs = require("express-handlebars");
-const path = require("path");
+const morgan = require("morgan");
+const session = require("express-session");
 
 //Setting up port
 var PORT = process.env.PORT || 8080;
 
-// Set Handlebars as the default templating engine
+//Set Handlebars as the default templating engine
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
+
+//Middleware
+
+//Static assets
 
 
 
