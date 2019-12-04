@@ -28,17 +28,11 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-app.get("/LandingPage", function(req, res) {
-    res.render("LandingPage", { title: "LandingPage", css: "/stylesheets/Css/LandingPage.css" });
-});
+const HTMLRoutes = require("./controllers/html-routes");
 
-app.get("/SnapShot", function(req, res) {
-    res.render("index", { title: "Snapshot", css: "/stylesheets/Css/index.css" });
-});
+app.use(HTMLRoutes);
 
-app.get("/UserSetUpBudget", function(req, res) {
-    res.render("UserSetUpBudget", { title: "Budget", css: "/stylesheets/Css/index.css" });
-});
+app.get("*", (req, res) => res.render("404"));
 
 // Synchronize my schema
 db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
