@@ -3,10 +3,10 @@ var ctxP = document.getElementById("pieChart").getContext('2d');
 var myPieChart = new Chart(ctxP, {
     type: 'pie',
     data: {
-        labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+        labels: ["Health", "Travel", "Food&Drink", "Transportation", "Misc", "Services"],
         datasets: [{
-            data: [300, 50, 100, 40, 120],
-            backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+            data: [100, 100, 100, 100, 100, 100],
+            backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#0000ff", "ffff00", "#6a0dad "],
             hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
         }]
     },
