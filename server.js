@@ -5,11 +5,11 @@ const session = ("express-session")
 const path = require("path");
 //Requiring our passport configuration
 //var passport = require("./config/passport");
-//var passport = require("./models")
+//crbtemp var passport = require("./models")
 
 //Setting up port
 const app = express()
-//Setting up port
+    //Setting up port
 var PORT = process.env.PORT || 8080;
 
 //Set Handlebars as the default templating engine
@@ -27,18 +27,21 @@ app.use(express.json());
 app.use(express.static('public'));
 
 app.get("/LandingPage", function(req, res) {
-    res.render("LandingPage", {title: "LandingPage", css: "/stylesheets/Css/LandingPage.css"});
-  });
+    res.render("LandingPage", { title: "LandingPage", css: "/stylesheets/Css/LandingPage.css" });
+});
 
 app.get("/SnapShot", function(req, res) {
-    res.render("index", {title: "Snapshot", css: "/stylesheets/Css/index.css"});
-  });
+    res.render("index", { title: "Snapshot", css: "/stylesheets/Css/index.css" });
+});
 
 app.get("/UserSetUpBudget", function(req, res) {
-    res.render("UserSetUpBudget", {title: "Budget", css: "/stylesheets/Css/index.css"});
-  });
-
-//Listening function
-app.listen(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+    res.render("UserSetUpBudget", { title: "Budget", css: "/stylesheets/Css/index.css" });
 });
+
+// Synchronize my schema
+//db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
+//    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`==> Server listening at http://localhost:${PORT}/`);
+        });
+  //  });
