@@ -3,9 +3,11 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const session = ("express-session")
 const path = require("path");
+
+const db = require("./models/index");
 //Requiring our passport configuration
 //var passport = require("./config/passport");
-//crbtemp var passport = require("./models")
+// var passport = require("./models")
 
 //Setting up port
 const app = express()
@@ -39,9 +41,9 @@ app.get("/UserSetUpBudget", function(req, res) {
 });
 
 // Synchronize my schema
-//db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
-//    .then(() => {
-app.listen(PORT, () => {
-    console.log(`==> Server listening at http://localhost:${PORT}/`);
-});
-//  });
+db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`==> Server listening at http://localhost:${PORT}/`);
+        });
+    });
