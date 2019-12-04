@@ -2,23 +2,13 @@ const isAuthenticated = require("../config/middleware/authenticated");
 const path = require("path")
 module.exports = function(app) {
 
-<<<<<<< HEAD
-    // app.get("/", function(req, res) {
-    //     // If the user already has an account send them to the members page
-    //     if (req.user) {
-    //         res.redirect("/Snapshot");
-    //     }
-    //     res.sendFile(path.join(__dirname, "../public/login.html"));
-    // });
-=======
-  // app.get("/", function (req, res) {
-        //If the user already has an account send them to the members page
-      //  if (req.user) {
-     //       res.redirect("/Snapshot");
-      //  }
-      //  res.sendFile(path.join(__dirname, "../public/login.html"));
+    // app.get("/", function (req, res) {
+    //If the user already has an account send them to the members page
+    //  if (req.user) {
+    //       res.redirect("/Snapshot");
+    //  }
+    //  res.sendFile(path.join(__dirname, "../public/login.html"));
     //});
->>>>>>> 6d72eb7af59a5b4ca046a305dc81700a5e654e1c
 
     // Here we've add our isAuthenticated middleware to this route.
     // If a user who is not logged in tries to access this route they will be redirected to the signup page
