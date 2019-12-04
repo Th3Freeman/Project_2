@@ -21,13 +21,8 @@ router.get("/Signup", function(req, res) {
 });
 
 router.get("/MoreCatInfo", function(req, res) {
-<<<<<<< HEAD
-    res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "/stylesheets/Css/MoreCatInfo.css"});
-});
-=======
     res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "./stylesheets/Css/MoreCatInfo.css" })
 })
->>>>>>> 48ed00fb85f3fadd4212f3c25719c8d85f827f69
 
 
 module.exports = router;
