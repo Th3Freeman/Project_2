@@ -34,9 +34,9 @@ require("./controllers/api-routes-proto")(app);
 app.get("*", (req, res) => res.render("404"));
 
 // Synchronize my schema
-db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
-    .then(() => {
+//db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
+    //.then(() => {
         app.listen(PORT, () => {
             console.log(`==> Server listening at http://localhost:${PORT}/`);
         });
-    });
+    //});
