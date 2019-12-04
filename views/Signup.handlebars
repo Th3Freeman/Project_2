@@ -45,17 +45,18 @@
                         <div class="card-body px-lg-5 pt-0">
 
                             <!-- Form -->
-                            <form class="text-center" style="color: #757575;" action="#!">
+                            {{!-- action="/api/signup" method="post" --}}
+                            <form id="signUpForm" target="_blank" class="text-center" style="color: #757575;" action="/api/signup" method="post" >
 
                                 <!-- Email -->
                                 <div class="md-form">
-                                    <input type="email" id="materialLoginFormEmail" class="form-control">
+                                    <input type="email" id="materialLoginFormEmail" class="form-control" name="email">
                                     <label for="materialLoginFormEmail">E-mail</label>
                                 </div>
 
                                 <!-- Password -->
                                 <div class="md-form">
-                                    <input type="password" id="materialLoginFormPassword" class="form-control">
+                                    <input type="password" id="materialLoginFormPassword" class="form-control" name="password">
                                     <label for="materialLoginFormPassword">Password</label>
                                 </div>
 
@@ -73,8 +74,7 @@
                                 </div>
 
                                 <!-- Sign in button -->
-                                <button class="btn peach-gradient btn-rounded btn-block my-4 waves-effect z-depth-0"
-                                    type="submit">Sign Up</button>
+                                <button class="btn peach-gradient btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" value="submit">Sign Up</button>
 
                                 <!-- Register -->
                                 
