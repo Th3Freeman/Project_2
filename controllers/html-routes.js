@@ -16,8 +16,8 @@ router.get("/UserSetUpBudget", function(req, res) {
 });
 
 router.get("/MoreCatInfo", function(req, res) {
-    res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "/stylesheets/Css/MoreCatInfo.css"})
-})
+    res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "/stylesheets/Css/MoreCatInfo.css"});
+});
 
 
 module.exports = router;

@@ -1,20 +1,21 @@
 const express = require("express");
 const router = express.Router();
 
-const db = require("../models/index");
+const db = require("../models");
 
 //Need to edit this
-router.get("/", (req, res) => {
+router.get("/expenses", (req, res) => {
   if (!req.user) {
     return res.redirect("/");
   }
 
-  db.Item.findAll({ where: { UserId: req.user.id } })
-    .then(items => {
-      res.render("list/index", {
+  db.Expense.findAll({ where: { UserId: req.user.id } })
+    .then(expenses => {
+      res.render("expenses/index", {
         user: req.user,
-        items: items
+        items: expenses,
       });
+      console.log(expenses);
     })
     .catch(err => {
       console.log(err);
@@ -22,19 +23,19 @@ router.get("/", (req, res) => {
     });
 });
 
-router.post("/list", (req, res) => {
+router.post("/expenses", (req, res) => {
   if (!req.user) {
     return res.status(403).end();
   }
 
-  db.Item.create({ name: req.body.name, UserId: req.user.id })
+  db.Expense.create({ name: req.body.name, UserId: req.user.id })
     .then(() => {
-      return db.Item.findAll({ where: { UserId: req.user.id } })
+      return db.Expense.findAll({ where: { UserId: req.user.id } })
     })
-    .then(items => {
-      res.render("list/index", {
+    .then(foundExpenses => {
+      res.render("expenses/index", {
         user: req.user,
-        items: items
+        items: foundExpenses
       });
     });
 });
