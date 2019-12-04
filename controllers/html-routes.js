@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+var isAuthenticated = require("../config/middleware/authenticated");
 
 
 router.get("/", function(req, res) {
@@ -12,8 +12,12 @@ router.get("/SnapShot", function(req, res) {
 });
 
 router.get("/UserSetUpBudget", function(req, res) {
-    res.render("UserSetUpBudget", { title: "Budget", css: "/stylesheets/Css/index.css" });
+    res.render("UserSetUpBudget", { title: "Budget", css: "/stylesheets/Css/UserSetUpBudget.css"});
 });
+
+router.get("/MoreCatInfo", function(req, res) {
+    res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "/stylesheets/Css/MoreCatInfo.css"})
+})
 
 
 module.exports = router;
