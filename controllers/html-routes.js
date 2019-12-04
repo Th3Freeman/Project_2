@@ -3,22 +3,26 @@ const router = express.Router();
 var isAuthenticated = require("../config/middleware/authenticated");
 
 
+
 router.get("/", function(req, res) {
-    res.render("LandingPage", { title: "LandingPage", css: "/stylesheets/Css/LandingPage.css" });
+    res.render("LandingPage", { title: "LandingPage", css: "./stylesheets/Css/LandingPage.css" });
 });
 
 router.get("/SnapShot", function(req, res) {
-    res.render("index", { title: "Snapshot", css: "/stylesheets/Css/index.css" });
+    res.render("index", { title: "Snapshot", css: "./stylesheets/Css/index.css" });
 });
 
 router.get("/UserSetUpBudget", function(req, res) {
-    res.render("UserSetUpBudget", { title: "Budget", css: "/stylesheets/Css/UserSetUpBudget.css"});
+    res.render("UserSetUpBudget", { title: "Budget", css: "./stylesheets/Css/UserSetUpBudget.css" });
+});
+
+router.get("/Signup", function(req, res) {
+    res.render("Signup", { title: "Landing", css: "./stylesheets/Css/LandingPage.css" });
 });
 
 router.get("/MoreCatInfo", function(req, res) {
-    res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "/stylesheets/Css/MoreCatInfo.css"})
+    res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "./stylesheets/Css/MoreCatInfo.css" })
 })
 
 
 module.exports = router;
-
