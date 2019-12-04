@@ -1,7 +1,7 @@
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 
-var db = require("../migrations/20191203194050-create-user");
+var db = require("../models");
 
 passport.use(new LocalStrategy(
   {
@@ -9,7 +9,7 @@ passport.use(new LocalStrategy(
   },
   function(email, password, done) {
     // When a user tries to sign in this code runs
-    db.Users.findOne({
+    db.User.findOne({
       where: {
         email: email
       }
