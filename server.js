@@ -26,7 +26,7 @@ app.use(express.json());
 
 app.use(express.static('public'));
 
-app.get("/LandingPage", function(req, res) {
+app.get("/", function(req, res) {
     res.render("LandingPage", { title: "LandingPage", css: "/stylesheets/Css/LandingPage.css" });
 });
 
