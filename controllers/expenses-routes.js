@@ -1,10 +1,8 @@
 const express = require("express");
-const router = express.Router();
-
 const db = require("../models");
 
 module.exports = function (app) {
-    router.get("/expenses", (req, res) => {
+    app.get("/expenses", (req, res) => {
         if (!req.user) {
             return res.redirect("/");
         }
@@ -23,7 +21,7 @@ module.exports = function (app) {
             });
     });
 
-    router.post("/expenses", (req, res) => {
+    app.post("/expenses", (req, res) => {
         if (!req.user) {
             return res.status(403).end();
         }
