@@ -5,15 +5,11 @@ const session = ("express-session")
 const path = require("path");
 //Requiring our passport configuration
 //var passport = require("./config/passport");
-<<<<<<< HEAD
 var passport = require("./models")
-=======
-//var passport = require("./models")
->>>>>>> 01395779f19a88b54b8b349d71c53b514c2c5dd7
 
 //Setting up port
 const app = express()
-//Setting up port
+    //Setting up port
 var PORT = process.env.PORT || 8080;
 
 //Set Handlebars as the default templating engine
@@ -27,28 +23,25 @@ app.use(express.json());
 //app.use(session({ secret: "MrSweetMeats", resave: true, saveUninitialized: true }));
 //app.use(passport.initialize());
 //app.use(passport.session());
-<<<<<<< HEAD
-=======
 
 app.use(express.static('public'));
->>>>>>> 01395779f19a88b54b8b349d71c53b514c2c5dd7
 
 app.get("/LandingPage", function(req, res) {
-    res.render("LandingPage", {title: "LandingPage", css: "/stylesheets/Css/LandingPage.css"});
-  });
+    res.render("LandingPage", { title: "LandingPage", css: "/stylesheets/Css/LandingPage.css" });
+});
 
 app.get("/SnapShot", function(req, res) {
-    res.render("index", {title: "Snapshot", css: "/stylesheets/Css/index.css"});
-  });
+    res.render("index", { title: "Snapshot", css: "/stylesheets/Css/index.css" });
+});
 
 app.get("/UserSetUpBudget", function(req, res) {
-    res.render("UserSetUpBudget", {title: "Budget", css: "/stylesheets/Css/index.css"});
-  });
+    res.render("UserSetUpBudget", { title: "Budget", css: "/stylesheets/Css/index.css" });
+});
 
 // Synchronize my schema
 db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
-  .then(() => {
-    app.listen(PORT, () => {
-      console.log(`==> Server listening at http://localhost:${PORT}/`);
+    .then(() => {
+        app.listen(PORT, () => {
+            console.log(`==> Server listening at http://localhost:${PORT}/`);
+        });
     });
-  });
