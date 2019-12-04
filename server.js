@@ -5,7 +5,7 @@ const session = ("express-session")
 const path = require("path");
 //Requiring our passport configuration
 //var passport = require("./config/passport");
-var passport = require("./models")
+//crbtemp var passport = require("./models")
 
 //Setting up port
 const app = express()
@@ -39,9 +39,9 @@ app.get("/UserSetUpBudget", function(req, res) {
 });
 
 // Synchronize my schema
-db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
-    .then(() => {
+//db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
+//    .then(() => {
         app.listen(PORT, () => {
             console.log(`==> Server listening at http://localhost:${PORT}/`);
         });
-    });
+  //  });
