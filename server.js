@@ -5,11 +5,7 @@ const session = ("express-session")
 const path = require("path");
 //Requiring our passport configuration
 //var passport = require("./config/passport");
-<<<<<<< HEAD
 var passport = require("./models")
-=======
-//var passport = require("./models")
->>>>>>> 01395779f19a88b54b8b349d71c53b514c2c5dd7
 
 //Setting up port
 const app = express()
@@ -27,11 +23,8 @@ app.use(express.json());
 //app.use(session({ secret: "MrSweetMeats", resave: true, saveUninitialized: true }));
 //app.use(passport.initialize());
 //app.use(passport.session());
-<<<<<<< HEAD
-=======
 
 app.use(express.static('public'));
->>>>>>> 01395779f19a88b54b8b349d71c53b514c2c5dd7
 
 app.get("/LandingPage", function(req, res) {
     res.render("LandingPage", {title: "LandingPage", css: "/stylesheets/Css/LandingPage.css"});
