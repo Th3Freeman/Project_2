@@ -5,13 +5,13 @@ module.exports = (sequelize, DataTypes) => {
     desc: DataTypes.STRING,
     amount: DataTypes.DECIMAL
   }, {});
-  Expenses.associate = function(models) {
+  
     // associations can be defined here
     Expenses.associate = function (models) {
       Expenses.belongsTo(models.User, {foreignKey: 'userId', targetKey: 'id'});
     };
   
 
-  };
+  
   return Expenses;
 };
