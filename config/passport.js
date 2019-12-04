@@ -1,17 +1,15 @@
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 
-var db = require("../models");
+var db = require("../migrations/20191203194050-create-user");
 
-// Telling passport we want to use a Local Strategy. In other words, we want login with a username/email and password
 passport.use(new LocalStrategy(
-  // Our user will sign in using an email, rather than a "username"
   {
     usernameField: "email"
   },
   function(email, password, done) {
     // When a user tries to sign in this code runs
-    db.User.findOne({
+    db.Users.findOne({
       where: {
         email: email
       }

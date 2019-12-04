@@ -3,11 +3,11 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const session = ("express-session")
 const path = require("path");
-
 const db = require("./models/index");
+
 //Requiring our passport configuration
 var passport = require("./config/passport");
-var passport = require("./models")
+var passport = require("./models");
 
 //Setting up port
 const app = express()
