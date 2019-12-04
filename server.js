@@ -3,11 +3,11 @@ const express = require("express");
 const exphbs = require("express-handlebars");
 const session = ("express-session")
 const path = require("path");
-
 const db = require("./models/index");
+
 //Requiring our passport configuration
-//var passport = require("./config/passport");
-// var passport = require("./models")
+var passport = require("./config/passport");
+var passport = require("./models");
 
 //Setting up port
 const app = express()
@@ -22,9 +22,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Uses sessions to keep track of our user's login status
-//app.use(session({ secret: "MrSweetMeats", resave: true, saveUninitialized: true }));
-//app.use(passport.initialize());
-//app.use(passport.session());
+// app.use(session({ secret: "MrSweetMeats", resave: true, saveUninitialized: true }));
+// app.use(passport.initialize());
+// app.use(passport.session());
 
 app.use(express.static('public'));
 
