@@ -22,6 +22,11 @@ module.exports = function(app) {
     });
 
     app.get("/MoreCatInfo", function(req, res) {
-        res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "./stylesheets/Css/MoreCatInfo.css" })
-    })
-};
+        res.render("MoreCatInfo", { title: "CategoryInfo", css: "./stylesheets/Css/MoreCatInfo.css" })
+    });
+
+    app.get("/AboutUs", function(req, res) {
+        res.render("AboutUs", { title: "About Us", css: "./stylesheets/Css/AboutUs.css" })
+    });
+
+}
