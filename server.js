@@ -10,7 +10,7 @@ var db = require("./models");
 
 //Setting up port
 const app = express()
-//Setting up port
+    //Setting up port
 var PORT = process.env.PORT || 8080;
 
 //Set Handlebars as the default templating engine
@@ -34,9 +34,9 @@ require("./controllers/api-routes-proto")(app);
 app.get("*", (req, res) => res.render("404"));
 
 // Synchronize my schema
-//db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
-//    .then(() => {
-        app.listen(PORT, () => {
-            console.log(`==> Server listening at http://localhost:${PORT}/`);
-        });
-//    });
+// db.sequelize.sync({ force: process.env.NODE_ENV !== "production" })
+//     .then(() => {
+app.listen(PORT, () => {
+    console.log(`==> Server listening at http://localhost:${PORT}/`);
+});
+// });

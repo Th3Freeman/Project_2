@@ -6,7 +6,7 @@ var myPieChart = new Chart(ctxP, {
         labels: ["Health", "Travel", "Food&Drink", "Transportation", "Misc", "Services"],
         datasets: [{
             data: [100, 100, 100, 100, 100, 100],
-            backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#0000ff", "ffff00", "#6a0dad "],
+            backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#0000ff", "#ffff00", "#6a0dad "],
             hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
         }]
     },
