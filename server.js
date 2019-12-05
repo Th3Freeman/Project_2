@@ -10,7 +10,7 @@ var db = require("./models");
 
 //Setting up port
 const app = express()
-    //Setting up port
+//Setting up port
 var PORT = process.env.PORT || 8080;
 
 //Set Handlebars as the default templating engine
