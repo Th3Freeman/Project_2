@@ -1,29 +1,22 @@
-const express = require("express");
-//crbtemp const db = require("../models");
 
-//crbtemp do i need models or modules/index?
-//const router = express.Router();
-// crbtemp are we using the router??
-const db = require("../models/index");
+const db = require("../models");
 
 module.exports = function (app) {
-    app.get("/expenses", (req, res) => {
-        //--- these lines are for redirect
-        // app.get("/expenses", (req, res) => {
-        //     if (!req.user) {
-        //     return res.redirect("/");
-        // }
-//============================
-console.log('you made it here 1');
+        app.get("/expenses", (req, res) => {
+            if (!req.user) {
+            return res.redirect("/");
+        }
+
         db.Expenses.findAll({
+            // temp hard code 3 for expense category
             where: {category: 1},
             include: [{
-            model: User,
-            where: [id = 1]
+            model: db.User,
+            // temp hard code 1 for userId
+            where: {id : 1}
             }]
         }).then(expenses => {
             /* ... */
-            console.log('you made it here 2');
             console.log(JSON.stringify(expenses))
             //---
             // res.render("expenses/index", {
@@ -36,21 +29,6 @@ console.log('you made it here 1');
             res.status(500).end();
         });
 
-//------------------
-        // db.Expense.findAll({ where: { UserId: req.user.id } })
-        //     .then(expenses => {
-        //         res.render("expenses/index", {
-        //             user: req.user,
-        //             items: expenses,
-        //         });
-        //         console.log(expenses);
-        //     })
-        //     .catch(err => {
-        //         console.log(err);
-        //         res.status(500).end();
-        //     });
-
-//''''''''''''''''''''''            
     });
 
     app.post("/expenses", (req, res) => {
