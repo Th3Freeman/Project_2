@@ -93,12 +93,15 @@
         <div class="row">
             <div class="col-2"></div>
             <div class="col"> <button class="btn btn-rounded btn-lg aqua-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="1">Travel</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded peach-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="2"> Food & Drink</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded blue-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="3">Transportation</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded FoodDrink peach-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="2"> Food & Drink</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Transportation blue-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="3">Transportation</button></div>
         </div>
         <br>
         <div class="row">
             <div class="col-2"></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Services purple-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="4">Services</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Shopping btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="5">Misc</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Health btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="6">Health</button></div>
             <div class="col"> <button class="btn btn-lg btn-rounded purple-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="4">Services</button></div>
             <div class="col"> <button class="btn btn-lg btn-rounded Shopping btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="5">Misc</button></div>
             <div class="col"> <button class="btn btn-lg btn-rounded Healths btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="6">Health</button></div>
@@ -121,13 +124,13 @@
       </button>
                 </div>
                 <div class="modal-body">
-                    <form action="/addExpenses" method="post">
+                    <form>
                     <!-- Line for Name -->
                     <div class="md-form input-group input-group-lg">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-lg">Name</span>
                         </div>
-                        <input name="desc" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
+                        <input id="desc" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
                     </div>
                     <!-- ./Line for Name -->
                     <!-- Line For Price -->
@@ -135,7 +138,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-lg">Price</span>
                         </div>
-                        <input name="amount" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
+                        <input id="amount" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
                     </div>
                     <!-- ./Line For Price -->
                 </div>
