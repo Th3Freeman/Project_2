@@ -22,7 +22,30 @@ module.exports = function(app) {
         res.render("Signup", { title: "Landing", css: "./stylesheets/Css/LandingPage.css" });
     });
 
-    app.get("/MoreCatInfo", isAuthenticated, function(req, res) {
-        res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "./stylesheets/Css/MoreCatInfo.css" })
-    })
-};
+    app.get("/MoreCatInfo/:cat", isAuthenticated, function(req, res) {
+        console.log(req.user);
+                db.Expenses.findAll({
+                    // temp hard code 3 for expense category
+                    where: {category: req.params.cat},
+                    include: [{
+                    model: db.User,
+                    // temp hard code 1 for userId
+                    where: {id : req.user.id}
+                    }]
+                }).then(expenses => {
+                    /* ... */
+                    console.log(JSON.stringify(expenses))
+                    res.render("MoreCatInfo", { 
+                        title: "CategoryInfo", 
+                        CSS: "./stylesheets/Css/MoreCatInfo.css",
+                        userId: req.user.id
+                     })
+
+                })
+                .catch(err => {
+                    console.log(err);
+                    res.status(500).end();
+                });
+        
+    });
+}
