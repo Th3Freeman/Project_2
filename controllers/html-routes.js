@@ -2,18 +2,14 @@ const isAuthenticated = require("../config/middleware/authenticated");
 const path = require("path")
 module.exports = function(app) {
 
-    // Here we've add our isAuthenticated middleware to this route.
-    // If a user who is not logged in tries to access this route they will be redirected to the signup page
-    
-    // app.get("/members", isAuthenticated, function(req, res) {
-    //     res.sendFile(path.join(__dirname, "..views/index.handlebars"));
-    // });
 
     app.get("/", function(req, res) {
         res.render("LandingPage", { title: "LandingPage", css: "./stylesheets/Css/LandingPage.css" });
     });
 
-    app.get("/SnapShot", function(req, res) {
+    // Here we've add our isAuthenticated middleware to this route.
+    // If a user who is not logged in tries to access this route they will be redirected to the signup page
+    app.get("/SnapShot", isAuthenticated, function(req, res) {
         res.render("index", { title: "Snapshot", css: "./stylesheets/Css/index.css" });
     });
 
