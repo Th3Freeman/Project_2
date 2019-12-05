@@ -2,12 +2,16 @@ body {
     background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 
-p {
-    color: white;
+h1 {
+    color: black;
 }
 
-h1 {
-    color: white;
+p {
+    color: black;
+}
+
+.Healths {
+    background: linear-gradient(120deg, rgb(230, 107, 12) 0%, #e40808 100%);
 }
 
 .AddBtn {
@@ -20,10 +24,6 @@ h1 {
 
 .Shopping {
     background: linear-gradient(120deg, rgb(233, 233, 19) 0%, #e8bb06 100%);
-}
-
-.Health {
-    background: linear-gradient(120deg, rgb(230, 107, 12) 0%, #e40808 100%);
 }
 
 .file-field.medium .file-path-wrapper {
