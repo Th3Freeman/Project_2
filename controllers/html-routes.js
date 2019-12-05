@@ -22,14 +22,14 @@ module.exports = function(app) {
         res.render("Signup", { title: "Landing", css: "./stylesheets/Css/LandingPage.css" });
     });
 
+    
     app.get("/MoreCatInfo/:cat", isAuthenticated, function(req, res) {
         console.log(req.user);
                 db.Expenses.findAll({
-                    // temp hard code 3 for expense category
                     where: {category: req.params.cat},
+                    attributes: [[db.sequelize.fn('SUM', db.sequelize.col('amount')), 'total']],
                     include: [{
                     model: db.User,
-                    // temp hard code 1 for userId
                     where: {id : req.user.id}
                     }]
                 }).then(expenses => {
@@ -37,8 +37,9 @@ module.exports = function(app) {
                     console.log(JSON.stringify(expenses))
                     res.render("MoreCatInfo", { 
                         title: "CategoryInfo", 
-                        CSS: "./stylesheets/Css/MoreCatInfo.css",
-                        userId: req.user.id
+                        css: "./stylesheets/Css/index.css",
+                        userId: req.user.id,
+                        expenses: expenses
                      })
 
                 })
