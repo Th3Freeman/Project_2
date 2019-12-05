@@ -1,7 +1,7 @@
 const isAuthenticated = require("../config/middleware/authenticated");
-const path = require("path")
-module.exports = function(app) {
+const path = require("path");
 
+module.exports = function(app) {
 
     app.get("/", function(req, res) {
         res.render("LandingPage", { title: "LandingPage", css: "./stylesheets/Css/LandingPage.css" });
@@ -13,7 +13,7 @@ module.exports = function(app) {
         res.render("index", { title: "Snapshot", css: "./stylesheets/Css/index.css" });
     });
 
-    app.get("/UserSetUpBudget", function(req, res) {
+    app.get("/UserSetUpBudget", isAuthenticated, function(req, res) {
         res.render("UserSetUpBudget", { title: "Budget", css: "./stylesheets/Css/UserSetUpBudget.css" });
     });
 
@@ -21,7 +21,7 @@ module.exports = function(app) {
         res.render("Signup", { title: "Landing", css: "./stylesheets/Css/LandingPage.css" });
     });
 
-    app.get("/MoreCatInfo", function(req, res) {
+    app.get("/MoreCatInfo", isAuthenticated, function(req, res) {
         res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "./stylesheets/Css/MoreCatInfo.css" })
     })
 };
