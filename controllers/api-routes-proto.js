@@ -2,13 +2,14 @@ var db = require("../models");
 var passport = require("../config/passport");
 
 
-module.exports = function (app) {
-  // Using the passport.authenticate middleware with our local strategy.
-  app.post("/api/login", passport.authenticate("local"), function (req, res) {
-    res.json(req.user);
-  });
-
-  // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
+module.exports = function(app) {
+    // Using the passport.authenticate middleware with our local strategy.
+    app.post("/api/login", passport.authenticate("local"), function(req, res) {
+      console.log(req.user);
+      res.json(req.user);
+    });
+  
+// Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
 
   app.post("/api/signup", function (req, res) {
     console.log("sign up route successfully hit")

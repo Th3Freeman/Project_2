@@ -3,9 +3,9 @@ var ctxB = document.getElementById("barChart").getContext('2d');
 var myBarChart = new Chart(ctxB, {
     type: 'bar',
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: ["Health", "Transportation", "Misc", "Travel", "Services", "Food&Drink"],
         datasets: [{
-            label: '# of Votes',
+            label: 'Cost Per Item',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
