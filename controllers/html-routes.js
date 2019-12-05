@@ -10,7 +10,7 @@ module.exports = function(app) {
     // Here we've add our isAuthenticated middleware to this route.
     // If a user who is not logged in tries to access this route they will be redirected to the signup page
     app.get("/SnapShot", isAuthenticated, function(req, res) {
-        res.render("index", { title: "Snapshot", css: "./stylesheets/Css/index.css" });
+        res.render("index", { title: "Snapshot", css: "./stylesheets/Css/index.css", JS:"./public/JS/indexpage.js" });
     });
 
     app.get("/UserSetUpBudget", function(req, res) {
@@ -21,7 +21,9 @@ module.exports = function(app) {
         res.render("Signup", { title: "Landing", css: "./stylesheets/Css/LandingPage.css" });
     });
 
-    app.get("/MoreCatInfo", function(req, res) {
+    app.get("/MoreCatInfo", isAuthenticated, function(req, res) {
         res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "./stylesheets/Css/MoreCatInfo.css" })
     })
+
+
 };
