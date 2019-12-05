@@ -29,6 +29,7 @@ app.use(express.static('public'));
 
 require("./controllers/html-routes")(app);
 require("./controllers/api-routes-proto")(app);
+require("./controllers/expenses-routes")(app);
 
 
 app.get("*", (req, res) => res.render("404"));

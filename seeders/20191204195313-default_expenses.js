@@ -685,7 +685,136 @@ module.exports = {
         userId: 4
         , createdAt: new Date(),
         updatedAt: new Date()
-      }                  
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 100,
+        userId: 4
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 65,
+        userId: 4
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 78,
+        userId: 4
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 44,
+        userId: 4
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 175,
+        userId: 3
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 65,
+        userId: 3
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 55,
+        userId: 3
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 40,
+        userId: 3
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 175,
+        userId: 2
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 65,
+        userId: 2
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 55,
+        userId: 2
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 40,
+        userId: 2
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 115,
+        userId: 1
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 35,
+        userId: 1
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 85,
+        userId: 1
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        category: 1,
+        desc: "Category 1 Expense",
+        amount: 40,
+        userId: 1
+        , createdAt: new Date(),
+        updatedAt: new Date()
+      }          
+                  
     ], {});
 
   },
