@@ -121,12 +121,13 @@
       </button>
                 </div>
                 <div class="modal-body">
+                    <form action="/expenses" method="POST">
                     <!-- Line for Name -->
                     <div class="md-form input-group input-group-lg">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-lg">Name</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
+                        <input name="desc" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
                     </div>
                     <!-- ./Line for Name -->
                     <!-- Line For Price -->
@@ -134,13 +135,14 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-lg">Price</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
+                        <input name="amount" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
                     </div>
                     <!-- ./Line For Price -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-rounded AddBtn">Add</button>
                 </div>
+                </form>
             </div>
         </div>
     </div>
