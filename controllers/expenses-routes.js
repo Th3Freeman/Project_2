@@ -31,7 +31,7 @@ module.exports = function (app) {
 
     });
 
-    app.post("/expenses", (req, res) => {
+    app.post("/addExpenses", (req, res) => {
         if (!req.user) {
             return res.status(403).end();
         }
