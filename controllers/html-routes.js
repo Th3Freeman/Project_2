@@ -50,6 +50,26 @@ module.exports = function(app) {
         res.render("AboutUs", { title: "About Us", css: "./stylesheets/Css/AboutUs.css" })
     });
 
+    //Category routes
+    app.get("/MoreCatInfo1", function(req, res) {
+        res.render("MoreCatInfo1", { title: "TravelInfo", css: "./stylesheets/Css/MoreCatInfo.css" })
+    });
+    app.get("/MoreCatInfo2", function(req, res) {
+        res.render("MoreCatInfo2", { title: "Food&DrinkInfo", css: "./stylesheets/Css/MoreCatInfo.css" })
+    });
+    app.get("/MoreCatInfo3", function(req, res) {
+        res.render("MoreCatInfo3", { title: "TransportationInfo", css: "./stylesheets/Css/MoreCatInfo.css" })
+    });
+    app.get("/MoreCatInfo4", function(req, res) {
+        res.render("MoreCatInfo4", { title: "ServicesInfo", css: "./stylesheets/Css/MoreCatInfo.css" })
+    });
+    app.get("/MoreCatInfo5", function(req, res) {
+        res.render("MoreCatInfo5", { title: "MiscInfo", css: "./stylesheets/Css/MoreCatInfo.css" })
+    });
+    app.get("/MoreCatInfo6", function(req, res) {
+        res.render("MoreCatInfo6", { title: "HealthInfo", css: "./stylesheets/Css/MoreCatInfo.css" })
+    });
+
 
 
     // app.get("/MoreCatInfo/:cat", isAuthenticated, function(req, res) {

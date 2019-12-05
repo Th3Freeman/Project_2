@@ -31,12 +31,17 @@ module.exports = function (app) {
 
     });
 
-    app.post("/expenses", (req, res) => {
+    app.post("/addExpenses", (req, res) => {
         if (!req.user) {
             return res.status(403).end();
         }
 
-        db.Expense.create({ name: req.body.name, UserId: req.user.id })
+        db.Expense.create({
+            category: req.body.category,
+            desc: req.body.desc,
+            amount: req.body.amount, 
+            UserId: req.user.id 
+        })
             .then(() => {
                 return db.Expense.findAll({ where: { UserId: req.user.id } })
             })
