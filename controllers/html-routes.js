@@ -4,7 +4,6 @@ const db = require("../models");
 
 module.exports = function(app) {
 
-
     app.get("/", function(req, res) {
         res.render("LandingPage", { title: "LandingPage", css: "./stylesheets/Css/LandingPage.css" });
     });
@@ -15,7 +14,7 @@ module.exports = function(app) {
         res.render("index", { title: "Snapshot", css: "./stylesheets/Css/index.css" });
     });
 
-    app.get("/UserSetUpBudget", function(req, res) {
+    app.get("/UserSetUpBudget", isAuthenticated, function(req, res) {
         res.render("UserSetUpBudget", { title: "Budget", css: "./stylesheets/Css/UserSetUpBudget.css" });
     });
 
@@ -23,31 +22,7 @@ module.exports = function(app) {
         res.render("Signup", { title: "Landing", css: "./stylesheets/Css/LandingPage.css" });
     });
 
-    app.get("/MoreCatInfo/:cat", function(req, res) {
-console.log(req.user);
-        db.Expenses.findAll({
-            // temp hard code 3 for expense category
-            where: {category: req.params.cat},
-            include: [{
-            model: db.User,
-            // temp hard code 1 for userId
-            where: {id : req.user.id}
-            }]
-        }).then(expenses => {
-            /* ... */
-            console.log(JSON.stringify(expenses))
-            //---
-            // res.render("expenses/index", {
-            //     user: req.user,
-            //     items: expenses,
-            // });
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).end();
-        });
-
-
+    app.get("/MoreCatInfo", isAuthenticated, function(req, res) {
         res.render("MoreCatInfo", { title: "CategoryInfo", CSS: "./stylesheets/Css/MoreCatInfo.css" })
     })
 };
