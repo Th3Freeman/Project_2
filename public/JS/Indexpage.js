@@ -1,12 +1,19 @@
 //pie
 var ctxP = document.getElementById("pieChart").getContext('2d');
-
+console.log('sdsdsd');
+console.log(expenses[0].dataValues.total);
 var myPieChart = new Chart(ctxP, {
     type: 'pie',
     data: {
         labels: ["Health", "Travel", "Food&Drink", "Transportation", "Misc", "Services"],
         datasets: [{
-            data: [100, 100, 100, 100, 100, 100],
+            data: [
+                expenses[0].dataValues.total, 
+                100, 
+                100, 
+                100, 
+                100, 
+                100],
             backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#0000ff", "#ffff00", "#6a0dad "],
             hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
         }]

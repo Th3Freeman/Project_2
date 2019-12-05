@@ -16,14 +16,16 @@ module.exports = function(app) {
         const db = require("../models");
         console.log('chris here');
         db.Expenses.findAll({
-            where: {category: 1},
-            attributes: [[db.sequelize.fn('SUM', db.sequelize.col('amount')), 'total']],
+//            where: {category: 1},
+            group: ['category'],
+            attributes: ['category', [db.sequelize.fn('SUM', db.sequelize.col('amount')), 'total']],
             include: [{
             model: db.User,
             where: {id : req.user.id}
             }]
         }).then(expenses => {
-            console.log(JSON.stringify(expenses))   
+     //       console.log(JSON.stringify(expenses))   
+          //  console.log(expenses);
         })
         .catch(err => {
             console.log(err);
@@ -33,7 +35,9 @@ module.exports = function(app) {
         res.render("index", { 
             title: "Snapshot", 
             css: "./stylesheets/Css/index.css", 
-            JS: "./public/JS/indexpage.js" });
+            JS: "./public/JS/indexpage.js",
+            expenses: db.expenses
+        });
     });
 
     app.get("/UserSetUpBudget", isAuthenticated, function(req, res) {
