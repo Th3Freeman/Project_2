@@ -92,16 +92,16 @@
         <!-- Buttons for Cats -->
         <div class="row">
             <div class="col-2"></div>
-            <div class="col"> <button class="btn btn-rounded btn-lg aqua-gradient" data-toggle="modal" data-target="#CatModal">Travel</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded FoodDrink peach-gradient" data-toggle="modal" data-target="#CatModal">Food & Drink</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded Transportation blue-gradient" data-toggle="modal" data-target="#CatModal">Transportation</button></div>
+            <div class="col"> <button class="btn btn-rounded btn-lg aqua-gradient" data-toggle="modal" data-target="#CatModal" data-cat="Travel">Travel</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded FoodDrink peach-gradient" data-toggle="modal" data-target="#CatModal" data-cat="Food & Drink"> Food & Drink</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Transportation blue-gradient" data-toggle="modal" data-target="#CatModal" data-cat="Transportation">Transportation</button></div>
         </div>
         <br>
         <div class="row">
             <div class="col-2"></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded Services purple-gradient" data-toggle="modal" data-target="#CatModal">Services</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded Shopping" data-toggle="modal" data-target="#CatModal">Shopping</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded Health" data-toggle="modal" data-target="#CatModal">Health</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Services purple-gradient" data-toggle="modal" data-target="#CatModal" data-cat="Services">Services</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Shopping" data-toggle="modal" data-target="#CatModal" data-cat="Misc">Misc</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Health" data-toggle="modal" data-target="#CatModal" data-cat="Health">Health</button></div>
         </div>
         <!-- ./Buttons for Cats -->
         <br>
@@ -115,7 +115,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">cat.name</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">$(this).attr("#data-cat")</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
