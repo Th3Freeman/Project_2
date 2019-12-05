@@ -38,7 +38,8 @@ module.exports = function(app) {
                     res.render("MoreCatInfo", { 
                         title: "CategoryInfo", 
                         CSS: "./stylesheets/Css/MoreCatInfo.css",
-                        userId: req.user.id
+                        userId: req.user.id,
+                        expenses: expenses
                      })
 
                 })
