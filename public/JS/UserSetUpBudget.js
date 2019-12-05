@@ -11,11 +11,21 @@ $(".btn-cat").click(function() {
     
 });
 
-$(".AddBtn").click(function() {
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response) {
 
-    })
+$(".AddBtn").click(function(event) {
+    event.preventDefault();
+    newExpense.desc = $("#desc").val();
+    newExpense.amount = parseFloat($("#amount").val());
+      $.ajax({
+         url: "/addExpenses",
+         method: "POST",
+         data: newExpense
+      }).then(function(response) {
+          //Close modal here
+          $('#CatModal').modal('hide');
+         console.log("Finished")
+
+
+     })
+  console.log(newExpense)
 });

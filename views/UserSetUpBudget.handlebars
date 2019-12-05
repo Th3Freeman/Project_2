@@ -24,11 +24,11 @@
                         Log Out
                     </a>
                 </li>
-                <li class="nav-item">
+                {{!-- <li class="nav-item">
                     <a class="nav-link waves-effect waves-light">1
                         <i class="fas fa-envelope"></i>
                       </a>
-                </li>
+                </li> --}}
                 <li class="nav-item avatar dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img src="./stylesheets/assets/images/02-silicon-valley-04-07.w710.h473.jpg" class="rounded-circle z-depth-0" alt="avatar image">
@@ -88,21 +88,22 @@
         </div>
         <!-- ./Income Form -->
 
-        <br>
+<br>
         <!-- Buttons for Cats -->
-        <div class="row">
+<div class="row">
             <div class="col-2"></div>
             <div class="col"> <button class="btn btn-rounded btn-lg aqua-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="1">Travel</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded FoodDrink peach-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="2"> Food & Drink</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded Transportation blue-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="3">Transportation</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded peach-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="2"> Food & Drink</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded blue-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="3">Transportation</button></div>
         </div>
         <br>
         <div class="row">
             <div class="col-2"></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded Services purple-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="4">Services</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded purple-gradient btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="4">Services</button></div>
             <div class="col"> <button class="btn btn-lg btn-rounded Shopping btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="5">Misc</button></div>
-            <div class="col"> <button class="btn btn-lg btn-rounded Health btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="6">Health</button></div>
+            <div class="col"> <button class="btn btn-lg btn-rounded Healths btn-cat" data-toggle="modal" data-target="#CatModal" data-cat="6">Health</button></div>
         </div>
+
         <!-- ./Buttons for Cats -->
         <br>
 
@@ -118,12 +119,13 @@
                     <h5 class="modal-title" id="exampleModalLabel"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <div class="modal-body">
+                    <form>
                     <!-- Line for Name -->
                     <div class="md-form input-group input-group-lg">
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-lg">Name</span>
                         </div>
-                        <input name="desc" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
+                        <input id="desc" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
                     </div>
                     <!-- ./Line for Name -->
                     <!-- Line For Price -->
@@ -131,7 +133,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text md-addon" id="inputGroupMaterial-sizing-lg">Price</span>
                         </div>
-                        <input name="amount" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
+                        <input id="amount" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroupMaterial-sizing-lg">
                     </div>
                     <!-- ./Line For Price -->
                 </div>

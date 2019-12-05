@@ -7,7 +7,7 @@ module.exports = function (app) {
             return res.redirect("/");
         }
 
-        db.Expenses.findAll({
+        db.Expense.findAll({
             // temp hard code 3 for expense category
             where: {category: 1},
             include: [{
@@ -36,20 +36,17 @@ module.exports = function (app) {
             return res.status(403).end();
         }
 
-        db.Expense.create({
+        db.Expenses.create({
             category: req.body.category,
             desc: req.body.desc,
             amount: req.body.amount, 
             UserId: req.user.id 
         })
-            .then(() => {
-                return db.Expense.findAll({ where: { UserId: req.user.id } })
-            })
+            //.then(() => {
+            //    return db.Expenses.findAll({ where: { UserId: req.user.id } })
+         //   })
             .then(foundExpenses => {
-                res.render("expenses/index", {
-                    user: req.user,
-                    items: foundExpenses
-                });
+                res.status(200).send({status: "OK"})
             });
     });
 
