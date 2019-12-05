@@ -1,0 +1,110 @@
+<!--Navbar -->
+        <!--Navbar -->
+    <nav class="mb-1 navbar navbar-expand-lg navbar-dark peach-gradient lighten-4">
+        <a class="navbar-brand" href="#">Bare Bones Budget</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/UserSetUpBudget">Manage Budget
+                        <span class="sr-only">(current)</span>
+                      </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/SnapShot">SnapShot</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/AboutUs">About</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light" href="/">
+                        Log Out
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">1
+                        <i class="fas fa-envelope"></i>
+                      </a>
+                </li>
+                <li class="nav-item avatar dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="./stylesheets/assets/images/02-silicon-valley-04-07.w710.h473.jpg" class="rounded-circle z-depth-0" alt="avatar image">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--/.Navbar -->
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <!-- Card Narrower -->
+            <div class="card card-cascade narrower">
+
+                <!-- Card image -->
+                <div class="view view-cascade overlay">
+                    <img class="card-img-top"
+                        src="./stylesheets/assets/images/young man with money flying out of wallet fees costs expenses expensive losing(1)-1 (1).webp"
+                        alt="Card image cap">
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                </div>
+
+                <!-- Card content -->
+                <div class="card-body card-body-cascade">
+
+                    <!-- Label -->
+                    <h5 class="black-text pb-2 pt-1"><i class="fas fa-barcode"></i> Misc</h5>
+                    <!-- Text -->
+                    <p class="card-text">The Top Table shows each item and it's price. The Bottom Graph shows Total cost per category.</p>
+                    <!-- Button -->
+
+                </div>
+
+            </div>
+            <!-- Card Narrower -->
+        </div>
+        <div class="col-6">
+            <table class="table">
+                <thead class="peach-gradient white-text">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody id ='tableDetails'>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>NetFlix</td>
+                        <td>$15.99</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Spotify</td>
+                        <td>$9.99</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Pandora</td>
+                        <td>$9.99</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="col">
+                <canvas id="barChart"></canvas>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!-- Team Scripts -->
+<script src="/JS/MoreCatInfo.js"></script>
