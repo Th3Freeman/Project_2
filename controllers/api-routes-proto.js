@@ -2,14 +2,15 @@ var db = require("../models");
 var passport = require("../config/passport");
 
 
-module.exports = function(app) {
-    // Using the passport.authenticate middleware with our local strategy.
-    app.post("/api/login", passport.authenticate("local"), function(req, res) {
-      console.log(req.user);
-      res.json(req.user);
-    });
-  
-// Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
+
+module.exports = function (app) {
+  // Using the passport.authenticate middleware with our local strategy.
+  app.post("/api/login", passport.authenticate("local"), function (req, res) {
+    console.log(req.user);
+    res.json(req.user);
+  });
+
+  // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
 
   app.post("/api/signup", function (req, res) {
     console.log("sign up route successfully hit")
@@ -18,20 +19,21 @@ module.exports = function(app) {
       password: req.body.password
     })
       .then(function (user) {
-        console.log(user)
-        res.redirect(307, "/api/login");
+        console.log(user);
+        res.redirect("/Snapshot");
+
       })
       .catch(function (err) {
-        console.log("found me!")
-        res.status(401).json(err);
+        console.log("found me!");
+        res.redirect("/Signup")
       });
   });
 
   // Route for logging user out
-    app.get("/logout", function (req, res) {
-      req.logout();
-      res.redirect("/");
-    });
+  app.get("/logout", function (req, res) {
+    req.logout();
+    res.redirect("/");
+  });
 
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function (req, res) {
