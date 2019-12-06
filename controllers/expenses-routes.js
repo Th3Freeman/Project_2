@@ -8,7 +8,6 @@ module.exports = function(app) {
 
         db.Expenses.findAll({
                 // temp hard code 3 for expense category
-                where: { category: 1 },
                 include: [{
                     model: db.User,
                     // temp hard code 1 for userId

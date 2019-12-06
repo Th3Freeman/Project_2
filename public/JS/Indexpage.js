@@ -1,35 +1,42 @@
 //pie
 var ctxP = document.getElementById("pieChart").getContext('2d');
+$.get('/expenses').then(expenses => {
+    console.log(expenses);
+    const expensesAtCategory = getResultsByCategory(expenses);
+    const oneData = expensesAtCategory(1);
+    const twoData = expensesAtCategory(2);
+    const threeData = expensesAtCategory(3);
+    const FourData = expensesAtCategory(4);
+    const FiveData = expensesAtCategory(5);
+    const SixData = expensesAtCategory(6);
 
-var cat_1_total = document.getElementById('cat_1_total');
-var cat_2_total = document.getElementById('cat_2_total');
-var cat_3_total = document.getElementById('cat_3_total');
-var cat_4_total = document.getElementById('cat_4_total');
-var cat_5_total = document.getElementById('cat_5_total');
-var cat_6_total = document.getElementById('cat_6_total');
-console.log('cat 1 '+ cat_1_total);
-console.log('cat 2 '+ cat_2_total);
-var myPieChart = new Chart(ctxP, {
-    type: 'pie',
-    data: {
-        labels: ["Health", "Travel", "Food&Drink", "Transportation", "Misc", "Services"],
-        datasets: [{
-            data: [
-                cat_1_total, 
-                cat_2_total, 
-                cat_3_total, 
-                cat_4_total, 
-                cat_5_total, 
-                cat_6_total, 
+    var myPieChart = new Chart(ctxP, {
+        type: 'pie',
+        data: {
+            labels: ["Category 1", "Category 2", "Category 3", "Category 4", "Category 5", "Category 6"],
+            datasets: [{
+                data: [
+                    getCategorySum(oneData),
+                    getCategorySum(twoData),
+                    getCategorySum(threeData),
+                    getCategorySum(FourData),
+                    getCategorySum(FiveData),
+                    getCategorySum(SixData),
+
                 ],
-            backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#0000ff", "#ffff00", "#6a0dad "],
-            hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
-        }]
-    },
-    options: {
-        responsive: true
-    }
-});
+                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#0000ff", "#ffff00", "#6a0dad "],
+                hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+            }]
+        },
+        options: {
+            responsive: true
+        }
+    });
+})
+
+
+const getResultsByCategory = e => n => e.filter(ex => ex.category == n);
+const getCategorySum = a => a.reduce((a, i) => a + Number(i.amount), 0);
 
 // Line
 var ctxL = document.getElementById("lineChart").getContext('2d');
@@ -78,5 +85,3 @@ var myLineChart = new Chart(ctxL, {
         }
     }
 });
-
-
