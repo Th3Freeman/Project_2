@@ -11,7 +11,7 @@ module.exports = function(app) {
                 include: [{
                     model: db.User,
                     // temp hard code 1 for userId
-                    where: { id: req.user.id }
+                    where: { id: 1 }
                 }]
             }).then(expenses => {
                 /* ... */
