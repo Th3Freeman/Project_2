@@ -34,12 +34,12 @@ module.exports = function(app) {
         if (!req.user) {
             return res.status(403).end();
         }
-
+        console.log(req.user.id, "<=")
         db.Expenses.create({
                 category: req.body.category,
                 desc: req.body.desc,
                 amount: req.body.amount,
-                UserId: req.user.id
+                userId: req.user.id
             })
             .then(async(data) => {
                 res.status(200).send(data)
