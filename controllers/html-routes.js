@@ -11,7 +11,33 @@ module.exports = function(app) {
     // Here we've add our isAuthenticated middleware to this route.
     // If a user who is not logged in tries to access this route they will be redirected to the signup page
     app.get("/SnapShot", isAuthenticated, function(req, res) {
-        res.render("index", { title: "Snapshot", css: "./stylesheets/Css/index.css", JS: "./public/JS/indexpage.js" });
+//---
+
+        const db = require("../models");
+        console.log('chris here');
+        db.Expenses.findAll({
+//            where: {category: 1},
+            group: ['category'],
+            attributes: ['category', [db.sequelize.fn('SUM', db.sequelize.col('amount')), 'total']],
+            include: [{
+            model: db.User,
+            where: {id : req.user.id}
+            }]
+        }).then(expenses => {
+     //       console.log(JSON.stringify(expenses))   
+          //  console.log(expenses);
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).end();
+        });
+//------------------------------        
+        res.render("index", { 
+            title: "Snapshot", 
+            css: "./stylesheets/Css/index.css", 
+            JS: "./public/JS/indexpage.js",
+            expenses: db.expenses
+        });
     });
 
     app.get("/UserSetUpBudget", isAuthenticated, function(req, res) {

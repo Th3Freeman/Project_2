@@ -43,7 +43,7 @@ module.exports = function(app) {
                 UserId: req.user.id
             })
             .then(async(data) => {
-                res.send(data)
+                res.status(200).send(data)
             })
             .catch(console.error)
     });

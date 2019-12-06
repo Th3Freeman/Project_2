@@ -13,10 +13,20 @@ $(".btn-cat").click(function() {
 
 });
 
-$(".AddBtn").click(function() {
-    $.post('/addExpenses', {
-
+$(".AddBtn").click(function(event) {
+    event.preventDefault();
+    newExpense.desc = $("#desc").val();
+    newExpense.amount = parseFloat($("#amount").val());
+    $.ajax({
+        url: "/addExpenses",
+        method: "POST",
+        data: newExpense
     }).then(function(response) {
         console.log(response)
+            //Close modal here
+        $('#CatModal').modal('hide');
+        console.log("Finished")
+
+
     })
 });
