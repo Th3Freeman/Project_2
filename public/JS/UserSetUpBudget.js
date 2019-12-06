@@ -1,7 +1,5 @@
 const newExpense = {};
 
-const queryURL = ''
-
 //Set up click listener
 $(".btn-cat").click(function() {
     //alert($(this).attr("data-cat"))
@@ -23,9 +21,9 @@ $(".AddBtn").click(function(event) {
         data: newExpense
     }).then(function(response) {
         console.log(response)
-            //Close modal here
+            //     //Close modal here
         $('#CatModal').modal('hide');
-        console.log("Finished")
+        // console.log("Finished")
 
 
     })
