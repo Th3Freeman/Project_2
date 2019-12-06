@@ -1,5 +1,7 @@
 const newExpense = {};
 
+const queryURL = ''
+
 //Set up click listener
 $(".btn-cat").click(function() {
     //alert($(this).attr("data-cat"))
@@ -8,14 +10,13 @@ $(".btn-cat").click(function() {
     //console.log(newExpense);
     $("#exampleModalLabel").text($(this).text());
 
-    
+
 });
 
 $(".AddBtn").click(function() {
-    $.ajax({
-        url: queryURL,
-        method: "GET"
-    }).then(function(response) {
+    $.post('/addExpenses', {
 
+    }).then(function(response) {
+        console.log(response)
     })
 });

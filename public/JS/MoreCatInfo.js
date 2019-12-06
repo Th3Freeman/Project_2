@@ -5,7 +5,7 @@ var myBarChart = new Chart(ctxB, {
     data: {
         labels: ["Health", "Transportation", "Misc", "Travel", "Services", "Food&Drink"],
         datasets: [{
-            label: 'Cost Per Item',
+            label: 'Cost',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
