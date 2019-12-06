@@ -1,21 +1,27 @@
 //pie
 var ctxP = document.getElementById("pieChart").getContext('2d');
-console.log('chris pie chart');
 
-//console.log(expenses[0].dataValues.total);
+var cat_1_total = document.getElementById('cat_1_total');
+var cat_2_total = document.getElementById('cat_2_total');
+var cat_3_total = document.getElementById('cat_3_total');
+var cat_4_total = document.getElementById('cat_4_total');
+var cat_5_total = document.getElementById('cat_5_total');
+var cat_6_total = document.getElementById('cat_6_total');
+console.log('cat 1 '+ cat_1_total);
+console.log('cat 2 '+ cat_2_total);
 var myPieChart = new Chart(ctxP, {
     type: 'pie',
     data: {
         labels: ["Health", "Travel", "Food&Drink", "Transportation", "Misc", "Services"],
         datasets: [{
             data: [
-  //              expenses[0].dataValues.total, 
-                100,
-                100, 
-                100, 
-                100, 
-                100, 
-                100],
+                cat_1_total, 
+                cat_2_total, 
+                cat_3_total, 
+                cat_4_total, 
+                cat_5_total, 
+                cat_6_total, 
+                ],
             backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#0000ff", "#ffff00", "#6a0dad "],
             hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
         }]
