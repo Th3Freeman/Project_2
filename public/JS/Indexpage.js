@@ -1,14 +1,16 @@
 //pie
 var ctxP = document.getElementById("pieChart").getContext('2d');
-console.log('sdsdsd');
-console.log(expenses[0].dataValues.total);
+console.log('chris pie chart');
+
+//console.log(expenses[0].dataValues.total);
 var myPieChart = new Chart(ctxP, {
     type: 'pie',
     data: {
         labels: ["Health", "Travel", "Food&Drink", "Transportation", "Misc", "Services"],
         datasets: [{
             data: [
-                expenses[0].dataValues.total, 
+  //              expenses[0].dataValues.total, 
+                100,
                 100, 
                 100, 
                 100, 

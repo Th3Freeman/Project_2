@@ -11,10 +11,8 @@ module.exports = function(app) {
     // Here we've add our isAuthenticated middleware to this route.
     // If a user who is not logged in tries to access this route they will be redirected to the signup page
     app.get("/SnapShot", isAuthenticated, function(req, res) {
-//---
 
         const db = require("../models");
-        console.log('chris here');
         db.Expenses.findAll({
 //            where: {category: 1},
             group: ['category'],
@@ -23,21 +21,24 @@ module.exports = function(app) {
             model: db.User,
             where: {id : req.user.id}
             }]
-        }).then(expenses => {
-     //       console.log(JSON.stringify(expenses))   
-          //  console.log(expenses);
+        }).then( catTotals => {    
+            res.render("index", { 
+              title: "Snapshot", 
+              css: "./stylesheets/Css/index.css", 
+              JS: "./public/JS/indexpage.js",
+              cat_1_total: catTotals[0].dataValues.total,
+              cat_2_total: catTotals[1].dataValues.total,
+              cat_3_total: catTotals[2].dataValues.total,
+              cat_4_total: catTotals[3].dataValues.total,
+              cat_5_total: catTotals[4].dataValues.total,
+              cat_6_total: catTotals[5].dataValues.total
+          });
         })
         .catch(err => {
             console.log(err);
             res.status(500).end();
         });
 //------------------------------        
-        res.render("index", { 
-            title: "Snapshot", 
-            css: "./stylesheets/Css/index.css", 
-            JS: "./public/JS/indexpage.js",
-            expenses: db.expenses
-        });
     });
 
     app.get("/UserSetUpBudget", isAuthenticated, function(req, res) {

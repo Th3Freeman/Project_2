@@ -1,43 +1,46 @@
-        <!--Navbar -->
-    <nav class="mb-1 navbar navbar-expand-lg navbar-dark peach-gradient lighten-4">
-        <a class="navbar-brand" href="/Snapshot">Bare Bones Budget</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555" aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/UserSetUpBudget">Manage Budget
-                        <span class="sr-only">(current)</span>
-                      </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/SnapShot">SnapShot</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/AboutUs">About</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto nav-flex-icons">
-                <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" id="Logout" type="button" href="/logout">
-                        Log Out
-                    </a>
+<!--Navbar -->
+<nav class="mb-1 navbar navbar-expand-lg navbar-dark peach-gradient lighten-4">
+    <a class="navbar-brand" href="/Snapshot">Bare Bones Budget</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+        aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/UserSetUpBudget">Manage Budget
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/SnapShot">SnapShot</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/AboutUs">About</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" id="Logout" type="button" href="/logout">
+                    Log Out
+                </a>
                 {{!-- </li>
                 <li class="nav-item">
                     <a class="nav-link waves-effect waves-light">1
                         <i class="fas fa-envelope"></i>
                       </a>
                 </li> --}}
-                <li class="nav-item avatar dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img src="./stylesheets/assets/images/02-silicon-valley-04-07.w710.h473.jpg" class="rounded-circle z-depth-0" alt="avatar image">
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!--/.Navbar -->
+            <li class="nav-item avatar dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-55" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img src="./stylesheets/assets/images/02-silicon-valley-04-07.w710.h473.jpg"
+                        class="rounded-circle z-depth-0" alt="avatar image">
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!--/.Navbar -->
 
 <br>
 <div class="container">
@@ -72,6 +75,14 @@
             <!-- Card -->
         </div>
         <div class="col">
+            <ul>
+                {{cat_1_total}}
+                {{cat_2_total}}
+                {{cat_3_total}}
+                {{cat_4_total}}
+                {{cat_5_total}}
+                {{cat_6_total}}
+            </ul>
             <canvas id="pieChart"></canvas>
         </div>
 
