@@ -97,7 +97,7 @@ module.exports = function(app) {
         res.render("MoreCatInfo6", { title: "HealthInfo", css: "./stylesheets/Css/MoreCatInfo.css" })
     });
 
-
+    
 
     // app.get("/MoreCatInfo/:cat", isAuthenticated, function(req, res) {
     //     console.log(req.user);
