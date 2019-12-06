@@ -13,7 +13,7 @@ $.get('/expenses').then(expenses => {
     var myPieChart = new Chart(ctxP, {
         type: 'pie',
         data: {
-            labels: ["Category 1", "Category 2", "Category 3", "Category 4", "Category 5", "Category 6"],
+            labels: ["Travel", "Food&Drink", "Transportation", "Services", "Misc", "Health"],
             datasets: [{
                 data: [
                     getCategorySum(oneData),
@@ -24,7 +24,7 @@ $.get('/expenses').then(expenses => {
                     getCategorySum(SixData),
 
                 ],
-                backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#0000ff", "#ffff00", "#6a0dad "],
+                backgroundColor: ["#00ff00", "#ffa500", "#0000ff", "#6a0dad", "#ffff00", "#ff0000"],
                 hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
             }]
         },
